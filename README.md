@@ -1,2 +1,2 @@
 # fullstackopen
-fullstackopen cours
+fullstackopen course
