@@ -1,1 +1,0 @@
-fullstackopen part1 course
