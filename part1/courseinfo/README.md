@@ -1,1 +1,1 @@
-part1 courseinfo 1.2
+part1 courseinfo 1.3
