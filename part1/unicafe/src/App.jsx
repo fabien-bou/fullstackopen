@@ -8,6 +8,7 @@ const Button = ({ handleClick, text }) => (
   </button>
 )
 
+
 const App = () => {
   // enregistrer les clics de chaque bouton dans un état différent
   const [good, setGood] = useState(0)
@@ -24,6 +25,9 @@ const App = () => {
       <div>good {good}</div>
       <div>neutral {neutral}</div>
       <div>bad {bad}</div>
+      <div>all {good + neutral + bad}</div>
+      <div>average {(good - bad) / (good + neutral + bad)}</div>
+      <div>positive {good / (good + neutral + bad) * 100} %</div>
     </div>
   )
 }
