@@ -8,6 +8,18 @@ const Button = ({ handleClick, text }) => (
   </button>
 )
 
+const Statistics = ({ good, neutral, bad }) => {
+  return (
+    <div>
+      <div>good {good}</div>
+      <div>neutral {neutral}</div>
+      <div>bad {bad}</div>
+      <div>all {good + neutral + bad}</div>
+      <div>average {(good - bad) / (good + neutral + bad)}</div>
+      <div>positive {good / (good + neutral + bad) * 100} %</div>
+    </div>
+  )
+}
 
 const App = () => {
   // enregistrer les clics de chaque bouton dans un état différent
@@ -22,12 +34,7 @@ const App = () => {
       <Button handleClick={() => setNeutral(neutral + 1)} text="neutral" />
       <Button handleClick={() => setBad(bad + 1)} text="bad" />
       <Title text="statistics" />
-      <div>good {good}</div>
-      <div>neutral {neutral}</div>
-      <div>bad {bad}</div>
-      <div>all {good + neutral + bad}</div>
-      <div>average {(good - bad) / (good + neutral + bad)}</div>
-      <div>positive {good / (good + neutral + bad) * 100} %</div>
+      <Statistics good={good} neutral={neutral} bad={bad} />
     </div>
   )
 }
