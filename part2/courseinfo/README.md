@@ -1,1 +1,1 @@
-part2 courseinfo 2.4
+part2 courseinfo 2.5    
